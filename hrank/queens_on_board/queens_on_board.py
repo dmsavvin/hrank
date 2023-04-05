@@ -91,12 +91,12 @@ def get_line_queens_arrangements(row: int, intervals: tuple) -> tuple:
         queens_arrangements.append(arrangement)
         for i in range(number_of_intervals):
             queens_columns[i] = ((queens_columns[i] + 1)
-                                    % (intervals_lengths[i] + 1))
+                                 % (intervals_lengths[i] + 1))
             if queens_columns[i] != 0:
                 break
-    arrangement = frozenset((row, column + offset - 1) 
-                            for column, offset 
-                            in zip(queens_columns, intervals_begins) 
+    arrangement = frozenset((row, column + offset - 1)
+                            for column, offset
+                            in zip(queens_columns, intervals_begins)
                             if column > 0)
     queens_arrangements.append(arrangement)
     return tuple(queens_arrangements)
@@ -123,8 +123,8 @@ def get_all_queens_arrangements(board: list) -> list:
     queens_arrangements = []
     for row, line in enumerate(board):
         intervals = line_to_intervals(line)
-        queens_arrangements.append( get_line_queens_arrangements(row, 
-                                                                 intervals))
+        queens_arrangements.append(get_line_queens_arrangements(row,
+                                                                intervals))
     return queens_arrangements
 
 
@@ -140,32 +140,30 @@ def get_under_threat_for_cells(board: list) -> dict:
     under_threat_for_cells = dict()
     R = len(board)
     C = len(board[0])
-    for i in range(R):
-        for j in range(C):
-            ut = set()
-            if board[i][j] != '#':
-                directions = [[i, j, 1, 0],
-                              [i, j, 1, 1],
-                              [i, j, 0, 1],
-                              [i, j, -1, 1],
-                              [i, j, -1, 0],
-                              [i, j, -1, -1],
-                              [i, j, 0, -1],
-                              [i, j, 1, -1]
-                              ]
-                ut.add((i, j))
-                while directions:
-                    for d in directions:
-                        d[0] += d[2]
-                        d[1] += d[3]
-                        if (0 <= d[0] < R 
-                            and 0 <= d[1] < C 
-                            and board[d[0]][d[1]] != '#'):
-                            ut.add((d[0], d[1]))
-                        else:
-                            d[0] = -1
-                    directions = [d for d in directions if d[0] != -1]
-                under_threat_for_cells[(i, j)] = frozenset(ut)
+    for i, j in ((i, j) for i in range(R)
+                 for j in range(C) if board[i][j] != '#'):
+        ut = set()
+        directions = [[i, j, 1, 0],
+                      [i, j, 1, 1],
+                      [i, j, 0, 1],
+                      [i, j, -1, 1],
+                      [i, j, -1, 0],
+                      [i, j, -1, -1],
+                      [i, j, 0, -1],
+                      [i, j, 1, -1]
+                      ]
+        ut.add((i, j))
+        while directions:
+            for d in directions:
+                d[0] += d[2]
+                d[1] += d[3]
+                if 0 <= d[0] < R and 0 <= d[1] < C \
+                   and board[d[0]][d[1]] != '#':
+                    ut.add((d[0], d[1]))
+                else:
+                    d[0] = -1
+            directions = [d for d in directions if d[0] != -1]
+        under_threat_for_cells[(i, j)] = frozenset(ut)
     return under_threat_for_cells
 
 
@@ -196,7 +194,7 @@ def queensBoard(board):
     under_threat_for_cells = get_under_threat_for_cells(board)
     under_threat_for_arrangements = \
         get_under_threat_for_arrangement(arrangements, under_threat_for_cells)
-    
+
     # Keys are the tuples of the following kind:
     # (
     #  board row number,
@@ -212,18 +210,18 @@ def queensBoard(board):
         the row (row included) and given the under_threat - subset of sub board
         which is under threat given the queens placed above the row.
         '''
-        available_arrangements = [arr for arr 
-                                  in arrangements[first_row] 
+        available_arrangements = [arr for arr
+                                  in arrangements[first_row]
                                   if not (arr & under_threat)]
         if first_row == last_row:
             return len(available_arrangements)
         res = 0
         new_first_row = first_row + 1
         for arr in available_arrangements:
-            new_under_threat = frozenset(cell for cell 
-                                        in under_threat 
-                                           | under_threat_for_arrangements[arr]
-                                        if cell[0] >= new_first_row)
+            new_under_threat = frozenset(cell for cell
+                                         in under_threat
+                                         | under_threat_for_arrangements[arr]
+                                         if cell[0] >= new_first_row)
             if (new_first_row, new_under_threat) in memo:
                 arr_count = memo[(new_first_row, new_under_threat)]
             else:
