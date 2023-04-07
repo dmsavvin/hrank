@@ -9,7 +9,7 @@ Practice solving the algo problems from HackerRank
 + The Longest Increasing Subsequence
 + [~~Connected Cells in a Grid~~](https://www.hackerrank.com/challenges/connected-cell-in-a-grid/problem)
 + [Jack Goes to Rapture](https://www.hackerrank.com/challenges/jack-goes-to-rapture/problem)
-+ [String Reduction](https://www.hackerrank.com/challenges/string-reduction/problem)
++ [~~String Reduction~~](https://www.hackerrank.com/challenges/string-reduction/problem)
 + [Matrix Land](https://www.hackerrank.com/challenges/matrix-land/problem)
 + [Choosing White Balls](https://www.hackerrank.com/challenges/choosing-white-balls/problem)
 + [Alien Languages](https://www.hackerrank.com/challenges/alien-languages/problem)
