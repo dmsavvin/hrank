@@ -6,7 +6,7 @@
 Practice solving the algo problems from HackerRank
 
 ### TODO
-+ The Longest Increasing Subsequence
++ [The Longest Increasing Subsequence](https://www.hackerrank.com/challenges/longest-increasing-subsequent/problem)
 + [~~Connected Cells in a Grid~~](https://www.hackerrank.com/challenges/connected-cell-in-a-grid/problem)
 + [Jack Goes to Rapture](https://www.hackerrank.com/challenges/jack-goes-to-rapture/problem)
 + [~~String Reduction~~](https://www.hackerrank.com/challenges/string-reduction/problem)
@@ -18,3 +18,14 @@ Practice solving the algo problems from HackerRank
 + [Wet Shark and Two Subsequence](https://www.hackerrank.com/challenges/wet-shark-and-two-subsequences/problem)
 + [Grid Walking](https://www.hackerrank.com/challenges/grid-walking/problem)
 + [~~Queens on Board~~](https://www.hackerrank.com/challenges/queens-on-board/problem)
++ [Fair Cut](https://www.hackerrank.com/challenges/fair-cut/problem)
++ [Abbreviation](https://www.hackerrank.com/challenges/abbr/problem)
++ [Summing Pieces](https://www.hackerrank.com/challenges/summing-pieces/problem)
++ [Mr K Marsh](https://www.hackerrank.com/challenges/mr-k-marsh/problem)
++ [Lego Blocks](https://www.hackerrank.com/challenges/lego-blocks/problem)
++ [~~Stock Maximize~~](https://www.hackerrank.com/challenges/stockmax/problem)
++ [Sam and Substrings](https://www.hackerrank.com/challenges/sam-and-substrings/problem)
++ [Construct the Array](https://www.hackerrank.com/challenges/construct-the-array/problem)
++ [Two Robots](https://www.hackerrank.com/challenges/two-robots/problem)
++ [LCS Returns](https://www.hackerrank.com/challenges/tutzki-and-lcs/problem)
++ [Equal](https://www.hackerrank.com/challenges/equal/problem)
