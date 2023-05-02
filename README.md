@@ -20,7 +20,7 @@ Practice solving the algo problems from HackerRank
 + [~~Queens on Board~~](https://www.hackerrank.com/challenges/queens-on-board/problem)
 + [Fair Cut](https://www.hackerrank.com/challenges/fair-cut/problem)
 + [Abbreviation](https://www.hackerrank.com/challenges/abbr/problem)
-+ [Summing Pieces](https://www.hackerrank.com/challenges/summing-pieces/problem)
++ [~~Summing Pieces~~](https://www.hackerrank.com/challenges/summing-pieces/problem)
 + [Mr K Marsh](https://www.hackerrank.com/challenges/mr-k-marsh/problem)
 + [Lego Blocks](https://www.hackerrank.com/challenges/lego-blocks/problem)
 + [~~Stock Maximize~~](https://www.hackerrank.com/challenges/stockmax/problem)
